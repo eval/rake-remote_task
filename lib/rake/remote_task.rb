@@ -156,7 +156,7 @@ class Rake::RemoteTask < Rake::Task
 
     warn cmdstr if $TRACE
 
-    success = system(*cmd)
+    success = system(cmdstr)
 
     raise Rake::CommandFailedError, "execution failed: #{cmdstr}" unless success
   end
